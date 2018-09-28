@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ejemplo2">
+
+<head>
+<title> Choose a country </title>
+<link href= "css/bootstrap.min.css" rel= "stylesheet"/>
+<link href= "css/style.css" rel= "stylesheet" />
+
+<script src="js/angular.js"> </script>
+<script src="js/controller.js"> </script>
+<script src="js/main.js"> </script>
+
+</head>
+
+<body  style="background: darksalmon;" ng-controller="controllerMain" ng-init="inicializar()">
+
+<div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+
+
+<h1>  <span style="color:black"> CHOOSE A COUNTRY  </h1> 
+
+<select ng-change="buscarRegiones()" ng-model="url">
+
+<option value="">Choose a country</option>
+<option value="http://restcountries.eu/rest/v1/region/africa">Africa</option>
+<option value="http://restcountries.eu/rest/v1/region/europe">Europa</option>
+<option value="http://restcountries.eu/rest/v1/region/americas">America</option>
+
+</select>
+  <br> </br>  
+  <table class="table table-inverse" ng-show="(paises.length>0)" style="width:100%" id= "t01">
+  
+	<tbody>
+
+	<tr >
+	<th>#</th>
+	<th>Country</th>
+	<th>Capital</th>
+	<th> Add </th>
+	<th> Info </th>
+	<th> Delete </th>
+	</tr>
+
+	<tr ng-repeat="pais in paises">
+	<td>{{$index+1}}</td>
+	<td>{{pais.name}}</td>
+	<td>{{pais.capital}}</td>
+	<td> <a href="#" onclick="addCountry();"> <img src="https://static.thenounproject.com/png/3879-200.png" width=25 height=25> </a> </td>
+	<td> <a href="#" onclick="infoCountry();"> <img src= "http://www.stickpng.com/assets/images/5a461410d099a2ad03f9c998.png" width=25  height=25> </a> </td>
+	<td> <a href="#" onclick="deleteCountry();"> <img src= "https://cdn0.iconfinder.com/data/icons/vector-huge-black-icons/60/full_recycle_bin-512.png" width=25  height=25> </a> </td> 
+	</tr>
+
+	</tbody>
+	</table>
+
+  <br/>
+  
+  <button type="submit" ng-show="(paises.length>0)"  style="width:200px;height:50px" class="btn btn-lg btn-primary btn-block" style="background-color: black;" onclick="goIndex();">Go Index</button>
+  
+ </div> 
+</div> 
+</div>
+
+</body> 
+  
+</html>

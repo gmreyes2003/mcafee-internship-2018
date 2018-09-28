@@ -1,0 +1,65 @@
+<html>
+  <title>Mcafee - Contact US</title>
+  <head>
+    <link href="CSS/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="CSS/style.css"/>
+  </head>
+  <body style="color:white;background: none;">
+  <section style="background-image:url('Img/McAfee.jpg'); background-repeat:no-repeat; background-size: 100% 100%;">
+    <nav class="fixed-top">
+      <ul>
+        <li><a href="form.html" id="1">FORM</a></li>
+        <li><a href="#" id="2">ABOUT US</a></li>
+        <li><a href="contact.html" id="3">CONTACT US</a></li>
+        <li><a href="countries.html" id="4">PROVINCES</a></li>
+      </ul>
+      <h1 id="fuente">McAfee Interships</h1>
+    </nav>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <input type="button" value="DO YOU WANT TO KNOW MORE?" style="font-weight:bold; color:white;" id="maxi" onclick="verAlert();" onmouseover="bigImg(this)" onmouseout="normalImg(this)"/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          </div>
+        </div>
+      </div>
+  </section>
+  <br/>
+  <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <form action="index.html" method="post" onsubmit="return validateForm()" id="formulario" class="text-center" >
+              <h2 style="color: black;"><b>CONTACT US</b></h2><br/>
+              <div class="form-group row">
+                <label class="col-2 text-right" for="first_name" style="color: black;">Email address:</label>
+                <div class="col-9">
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted col-12">We'll never share your email with anyone else.</small>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2 col-form-label" for="first_name"  style="color: black;">Subjet:</label>
+                <div class="col-9">
+                  <input type="text" class="form-control" id="subjet" aria-describedby="submitHelp" placeholder="Enter subjet">
+                  <small id="subjetValidation" class="form-text text-muted col-12" style="color:red !important"></small>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2 col-form-label" for="first_name"  style="color: black;">Message:</label>
+                <div class="col-9">
+                  <textarea class="form-control" id="message" rows="3" placeholder="Enter message"></textarea>
+                  <small id="messageValidation" class="form-text text-muted col-12" style="color: red !important"></small>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  </body>
+</html>
