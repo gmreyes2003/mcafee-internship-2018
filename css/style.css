@@ -17,7 +17,7 @@ background-color: #cccccc;   `
 
   @font-face {
   font-family:Black;
-  src: url('../Fonts/Black sneakers.ttf') format('truetype');
+  src: url('../fonts/Black sneakers.ttf') format('truetype');
   }
 
 #fuente{font-family:Black;
