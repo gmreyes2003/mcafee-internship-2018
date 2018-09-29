@@ -1,14 +1,18 @@
 	function validar() {
 		var user = document.getElementById("user").value;
 		var pass = document.getElementById("pass").value;
-		if (user != "admin" || user=="") {
-			alert("User empy or incorrect")
+		if (user=="") {
+			alert("User empty, please enter one.")
 			return false;
 		}
-		if(  pass=="" || pass!="admin"){
-			alert("Pass empy or incorrect");
+		if(pass==""){
+			alert("Password empty, please enter one.");
 			return false;
 		}
+		
+		if (user == "admin" && pass == "adminmc2018"){
+			alert("WELCOME FOLKS!!!!!!!!!!!");
+	        }
 		                      
 		window.location="index.html";
 	}
